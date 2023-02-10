@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Layouts.GridDemo">
+
+    <Grid RowDefinitions="2*, *, Auto"
+          ColumnDefinitions="Auto, *"
+          RowSpacing="0"
+          ColumnSpacing="0">
+        <BoxView Grid.Column="0"
+                 Grid.Row="0"
+                 BackgroundColor="Black"
+                 WidthRequest="100"/>
+        <BoxView Grid.Column="1"
+                 Grid.Row="0"
+                 BackgroundColor="Blue" />
+        <BoxView Grid.Column="0"
+                 Grid.Row="1"
+                 Grid.ColumnSpan="2"
+                 BackgroundColor="Green" />
+        <!--<BoxView Grid.Column="1"
+                 Grid.Row="1"
+                 BackgroundColor="Red" />-->
+        <BoxView Grid.Column="0"
+                 Grid.Row="2"
+                 BackgroundColor="Aqua" />
+        <BoxView Grid.Column="1"
+                 Grid.Row="2"
+                 BackgroundColor="Yellow" />
+    </Grid>
+</ContentPage>
+

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="True"
+    x:Class="Layouts.StackLayoutDemo">
+
+    <StackLayout>
+        <Label Text="Welcome to Xamarin.Forms 1"
+               VerticalOptions="{Binding Path=SelectedItem.Options, Source={x:Reference VerticalOptionsPicker}}"
+               HorizontalOptions="{Binding Path=SelectedItem.Options, Source={x:Reference HorizontalOptionsPicker}}" />
+        <Label Text="Welcome to Xamarin.Forms 2"
+               VerticalOptions="{Binding Path=SelectedItem.Options, Source={x:Reference VerticalOptionsPicker}}"
+               HorizontalOptions="{Binding Path=SelectedItem.Options, Source={x:Reference HorizontalOptionsPicker}}" />
+        <Label Text="Welcome to Xamarin.Forms 3"
+               VerticalOptions="{Binding Path=SelectedItem.Options, Source={x:Reference VerticalOptionsPicker}}"
+               HorizontalOptions="{Binding Path=SelectedItem.Options, Source={x:Reference HorizontalOptionsPicker}}" />
+        <Picker x:Name="HorizontalOptionsPicker" ItemDisplayBinding="{Binding Name}" />
+        <Picker x:Name="VerticalOptionsPicker" ItemDisplayBinding="{Binding Name}" />
+    </StackLayout>
+</ContentPage>
+
