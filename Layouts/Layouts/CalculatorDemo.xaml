@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Layouts.CalculatorDemo">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="PlainButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#eee" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="CornerRadius" Value="0" />
+                <Setter Property="FontSize" Value="40" />
+            </Style>
+            <Style x:Key="DarkerButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#ddd" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="CornerRadius" Value="0" />
+                <Setter Property="FontSize" Value="40" />
+            </Style>
+            <Style x:Key="OrangeButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#E8AD00" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="CornerRadius" Value="0" />
+                <Setter Property="FontSize" Value="40" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid RowSpacing="1"
+          ColumnSpacing="1"
+          RowDefinitions="150, *, *, *, *, *"
+          ColumnDefinitions="*, *, *, *">
+
+        <Label Text="0"
+               HorizontalTextAlignment="End"
+               VerticalTextAlignment="End"
+               TextColor="Black"
+               FontSize="60"
+               Grid.ColumnSpan="4" />
+
+        <!--Row 1-->
+        <Button Text="C"
+                Grid.Row="1"
+                Style="{StaticResource DarkerButton}"/>
+        <Button Text="+/-"
+                Grid.Row="1"
+                Grid.Column="1"
+                Style="{StaticResource DarkerButton}"/>
+        <Button Text="%"
+                Grid.Row="1"
+                Grid.Column="2"
+                Style="{StaticResource DarkerButton}"/>
+         <Button Text="/"
+                Grid.Row="1"
+                Grid.Column="3"
+                Style="{StaticResource OrangeButton}"/>
+
+        <!--Row 2-->
+        <Button Text="7"
+                Grid.Row="2"
+                Style="{StaticResource PlainButton}"/>
+        <Button Text="8"
+                Grid.Row="2"
+                Grid.Column="1"
+                Style="{StaticResource PlainButton}"/>
+        <Button Text="9"
+                Grid.Row="2"
+                Grid.Column="2"
+                Style="{StaticResource PlainButton}"/>
+        <Button Text="*"
+                Grid.Row="2"
+                Grid.Column="3"
+                Style="{StaticResource OrangeButton}"/>
+
+        <!--Row 3-->
+        <Button Text="4"
+                Grid.Row="3"
+                Style="{StaticResource PlainButton}"/>
+        <Button Text="5"
+                Grid.Row="3"
+                Grid.Column="1"
+                Style="{StaticResource PlainButton}"/>
+        <Button Text="6"
+                Grid.Row="3"
+                Grid.Column="2"
+                Style="{StaticResource PlainButton}"/>
+        <Button Text="-"
+                Grid.Row="3"
+                Grid.Column="3"
+                Style="{StaticResource OrangeButton}"/>
+
+        <!--Row 4-->
+        <Button Text="1"
+                Grid.Row="4"
+                Style="{StaticResource PlainButton}"/>
+        <Button Text="2"
+                Grid.Row="4"
+                Grid.Column="1"
+                Style="{StaticResource PlainButton}"/>
+        <Button Text="3"
+                Grid.Row="4"
+                Grid.Column="2"
+                Style="{StaticResource PlainButton}"/>
+        <Button Text="+"
+                Grid.Row="4"
+                Grid.Column="3"
+                Style="{StaticResource OrangeButton}"/>
+
+        <!--Row 5-->
+        <Button Text="0"
+                Grid.Row="5"
+                Grid.ColumnSpan="2"
+                Style="{StaticResource PlainButton}"/>
+        <Button Text="."
+                Grid.Row="5"
+                Grid.Column="2"
+                Style="{StaticResource PlainButton}"/>
+        <Button Text="="
+                Grid.Row="5"
+                Grid.Column="3"
+                Style="{StaticResource OrangeButton}"/>
+    </Grid>
+</ContentPage>
+

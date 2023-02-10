@@ -14,4 +14,16 @@
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="Images\Banana.jpg" />
+    <None Remove="Images\FacePalm.jpg" />
+    <None Remove="Images\monkey.png" />
+    <None Remove="Images\SeatedMonkey.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Banana.jpg" />
+    <EmbeddedResource Include="Images\FacePalm.jpg" />
+    <EmbeddedResource Include="Images\monkey.png" />
+    <EmbeddedResource Include="Images\SeatedMonkey.jpg" />
+  </ItemGroup>
 </Project>

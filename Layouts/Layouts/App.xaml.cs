@@ -10,7 +10,7 @@ namespace Layouts
         {
             InitializeComponent();
 
-            MainPage = new FlexLayoutDemo();
+            MainPage = new CatalogDemo();
         }
 
         protected override void OnStart ()
